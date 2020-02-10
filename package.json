@@ -11,6 +11,8 @@
   "author": "Ben Hadfield <benjohnhadfield@gmail.com>",
   "license": "ISC",
   "dependencies": {
+    "@mdx-js/loader": "^1.5.5",
+    "@next/mdx": "^9.2.1",
     "classnames": "^2.2.6",
     "next": "^9.2.1",
     "react": "^16.12.0",

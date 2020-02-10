@@ -1,14 +1,5 @@
-import React from 'react'
+import Article from '../../../enhancers/mdxArticle'
 
-import Layout from '../../../enhancers/layout'
-import Article from '../../../components/article/article'
+import TakeYouThere from './post.mdx'
 
-const Page = () => {
-  return (
-    <Article title="Feburary Cratedigging">
-      <p>Paragraph one blha mfsajnfwehifib d sac ejne njc</p>
-    </Article>
-  )
-}
-
-export default Layout(Page)
+export default Article(TakeYouThere)({ title: "Febuary Cratedigging" })

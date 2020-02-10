@@ -5,7 +5,7 @@ import c from 'classnames'
 import styles from './nav.module.css'
 
 const links = [
-  {href: "https://soundcloud.com/benmoose", linkText: "SoundCloud", rel: "_blank"},
+  {href: "https://soundcloud.com/benmoose", text: "SoundCloud", external: true},
 ]
 
 export default () => {
@@ -21,13 +21,27 @@ export default () => {
           </Link>
         </div>
         <div className={c(styles.navSection, styles.textRight)}>
-          {
-            links.map(l => (
-              <Link href={l.href}><a target={l.rel} className={styles.linkItem}>{l.linkText}</a></Link>
-            ))
-          }
+          {links.map(getLinkComponent)}
         </div>
       </div>
     </nav>
+  )
+}
+
+function getLinkComponent (link) {
+  if (link.external) {
+    return (
+      <a
+        className={styles.linkItem}
+        href={link.href}
+        target="_blank"
+        key={link.href}
+      >{link.text}</a>
+    )
+  }
+  return (
+    <Link href={link.href} key={l.href}>
+      <a className={styles.linkItem}>{link.text}</a>
+    </Link>
   )
 }
