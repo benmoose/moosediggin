@@ -1,0 +1,38 @@
+.background {
+  background: transparent;
+  padding: 15px;
+}
+
+.navContainer {
+  display: flex;
+}
+
+.navSection {
+  flex: 1;
+}
+
+.textRight {
+  text-align: right;
+}
+
+.textCentre {
+  text-align: center;
+}
+
+.linkItem {
+  margin: 0 10px;
+  color: black;
+  opacity: .7;
+}
+
+.linkItem:hover {
+  color: black;
+  opacity: 1;
+  text-decoration: none;
+}
+
+.brandText {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: black;
+}
