@@ -8,7 +8,9 @@ import styles from './layout.module.css'
 export default Page => props => (
   <>
     <div className={styles.navContainer}>
-      <Nav />
+      <div className={styles.navInner}>
+        <Nav />
+      </div>
     </div>
     <main className={styles.main}>
       <Page {...props} />

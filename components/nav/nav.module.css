@@ -1,6 +1,6 @@
 .background {
   background: transparent;
-  padding: 15px;
+  padding: 25px;
 }
 
 .navContainer {
@@ -35,4 +35,8 @@
   font-weight: bold;
   font-size: 1.2rem;
   color: black;
+}
+
+.brandLink, .brandLink:hover {
+  text-decoration: none;
 }
