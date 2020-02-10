@@ -1,0 +1,10 @@
+.main {
+  margin-top: 50px;
+}
+
+.navContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}

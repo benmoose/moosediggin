@@ -1,8 +1,13 @@
 import React from 'react'
-import Nav from '../components/nav'
 
-export default () => {
+import Layout from '../enhancers/layout'
+
+const Home = () => {
   return (
-    <Nav />
+    <>
+      <h1>Hello</h1>
+    </>
   )
 }
+
+export default Layout(Home)

@@ -5,7 +5,7 @@ import c from 'classnames'
 import styles from './nav.module.css'
 
 const links = [
-  {href: "/", linkText: "Posts"},
+  {href: "/", linkText: "Sessions"},
 ]
 
 export default () => {
