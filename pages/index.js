@@ -1,24 +1,23 @@
 import React from 'react'
 
-import Layout from '../enhancers/layout'
 import PostLink from '../components/postLink'
 
-const pages = [
-  {
-    href: "/cratedigging/2020-02",
-    title: "Cratedigging – Febuary 2020",
-    snippetText: "Prepare yourself for a bloody deep journey... this month we decend into cavernous warehouses and experience some truly awe-inspiring techno & dark house before rising on the back of deep emotive electronica. Honestly, this music just makes me feel so connected to the earth. Let's dive in...",
-    imageURL: "https://images.sk-static.com/images/media/profile_images/artists/2245195/huge_avatar",
-    imageCaption: "Cover – Guy J",
-  },
-]
-
-const Home = () => {
-  return (
-    <>
-      {pages.map(post => <PostLink key={post.href} {...post} />)}
-    </>
-  )
+const Home = ({ pages }) => {
+  return pages.map(post => <PostLink key={post.href} {...post} />)
 }
 
-export default Layout(Home)
+Home.getInitialProps = function () {
+  const pages = (context => {
+    const keys = context.keys()
+    const pages = keys.map(key => {
+      const { title, date, imageURL, snippetText } = context(key)
+      const href = key.slice(0, -4)
+      return { title, date, imageURL, snippetText, href }
+    })
+    return pages
+  })(require.context("./", false, /\.mdx$/))
+
+  return { pages: pages.sort((a, b) => a.date > b.date ? -1 : 1) }
+}
+
+export default Home

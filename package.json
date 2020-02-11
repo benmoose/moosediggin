@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "next",
-    "build": "next build && next export",
+    "build": "next build",
     "start": "next start"
   },
   "repository": {
@@ -16,6 +16,7 @@
   "license": "ISC",
   "dependencies": {
     "@mdx-js/loader": "^1.5.5",
+    "@mdx-js/mdx": "^1.5.5",
     "@next/mdx": "^9.2.1",
     "classnames": "^2.2.6",
     "glob": "^7.1.6",
