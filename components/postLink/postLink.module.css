@@ -56,11 +56,11 @@
   border-radius: 50%;
   background-color: black;
   transform: rotate(0deg);
-  box-shadow: 0 0 6px rgba(0, 0, 0, .1);
+  box-shadow: 0 0 6px rgba(0, 20, 40, .17);
 
   transition-property: transform top;
-  transition: ease-in-out 400ms;
-  transition-delay: 90ms;
+  transition: ease-in-out 410ms;
+  transition-delay: 100ms;
 }
 
 .container:hover .image {
