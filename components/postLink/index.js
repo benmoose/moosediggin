@@ -13,7 +13,7 @@ export default ({ title, snippetText, imageURL, imageCaption, href }) => {
         </figure>
         <img
           src="/img/vinyl.png"
-          className={styles.image}
+          className={styles.vinyl}
         />
       </div>
       <section className={styles.textContainer}>

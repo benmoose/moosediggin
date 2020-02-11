@@ -13,7 +13,7 @@
   min-width: 240px;
   height: 240px;
   background: white;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, .12);
+  box-shadow: 0 1px 19px rgba(0, 25, 45, .14);
   border-radius: 2px;
 }
 
@@ -47,7 +47,7 @@
   font-size: 1.2rem;
 }
 
-.image {
+.vinyl {
   position: absolute;
   width: 90%;
   left: 5%;
@@ -56,14 +56,14 @@
   border-radius: 50%;
   background-color: black;
   transform: rotate(0deg);
-  box-shadow: 0 0 6px rgba(0, 20, 40, .17);
 
   transition-property: transform top;
-  transition: ease-in-out 410ms;
+  transition-timing-function: ease-in-out;
+  transition-duration: 410ms;
   transition-delay: 100ms;
 }
 
-.container:hover .image {
+.container:hover .vinyl, .vinyl:hover {
   top: -70px;
   transform: rotate(22deg);
 }
