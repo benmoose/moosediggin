@@ -55,16 +55,17 @@
   z-index: -1;
   border-radius: 50%;
   background-color: black;
-  transform: rotate(22deg);
+  transform: rotate(0deg);
   box-shadow: 0 0 6px rgba(0, 0, 0, .1);
 
-  transition: all ease-in-out 400ms;
+  transition-property: transform top;
+  transition: ease-in-out 400ms;
   transition-delay: 90ms;
 }
 
 .container:hover .image {
   top: -70px;
-  transform: rotate(0);
+  transform: rotate(22deg);
 }
 
 .link, .link:hover {
