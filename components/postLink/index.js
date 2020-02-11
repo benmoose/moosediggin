@@ -3,11 +3,14 @@ import Link from 'next/link'
 
 import styles from './postLink.module.css'
 
-export default ({ title, snippetText, imageURL, href }) => {
+export default ({ title, snippetText, imageURL, imageCaption, href }) => {
   return (
     <div className={styles.container}>
       <div className={styles.albumContainer}>
-        <img className={styles.albumArt} src={imageURL} />
+        <figure>
+          <img className={styles.albumArt} src={imageURL} />
+          <figcaption className={styles.caption}>{imageCaption}</figcaption>
+        </figure>
         <img
           src="/img/vinyl.png"
           className={styles.image}

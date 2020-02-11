@@ -27,6 +27,17 @@
   overflow: hidden;
 }
 
+.caption {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: right;
+  padding: 6px 8px;
+  color: white;
+  opacity: .55;
+  font-size: 0.55rem;
+}
+
 .textContainer {
   margin-left: 55px;
 }
