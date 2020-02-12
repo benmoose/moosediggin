@@ -9,7 +9,7 @@ const Home = ({ pages }) => {
 Home.getInitialProps = function () {
   const pages = (context => {
     return context.keys().map(key => getPage(context, key))
-  })(require.context("./", false, /\.mdx$/))
+  })(require.context("./", true, /\.mdx$/))
 
   return { pages: pages.sort((a, b) => a.date > b.date ? -1 : 1) }
 }
