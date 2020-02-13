@@ -1,18 +1,21 @@
 import React from 'react'
 import url from 'url'
 
-export default ({ soundcloudLink }) => {
+import styles from './soundcloudPlayer.module.css'
+
+export default ({ src }) => {
   return (
-    <iframe
-      style={{
-        width: "100%",
-        height: "166px",
-        margin: "25px 0 30px",
-      }}
-      scrolling="no"
-      frameBorder="no"
-      src={generateSoundcloudSRC(soundcloudLink)}
-    />
+    <div className={styles.container}>
+      <iframe
+        style={{
+          width: "100%",
+          height: "166px",
+        }}
+        scrolling="no"
+        frameBorder="no"
+        src={generateSoundcloudSRC(src)}
+      />
+    </div>
   )
 }
 
