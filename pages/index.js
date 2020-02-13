@@ -15,7 +15,7 @@ Home.getInitialProps = function () {
 }
 
 function getPage (context, key) {
-  const { title, date, imageURL, snippetText } = context(key)
+  const { title, date, imageURL, imageCaption, snippetText } = context(key)
   if (!title) {
     throw Error(`${key} is missing required metadata 'title'`)
   }
@@ -29,7 +29,7 @@ function getPage (context, key) {
     throw Error(`${key} is missing required metadata 'snippetText'`)
   }
   const href = key.slice(0, -4)
-  return { title, date, imageURL, snippetText, href }
+  return { title, date, imageURL, imageCaption, snippetText, href }
 }
 
 export default Home
