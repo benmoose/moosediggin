@@ -1,9 +1,10 @@
 import React from 'react'
 import Link from 'next/link'
+import moment from 'moment'
 
 import styles from './postLink.module.css'
 
-export default ({ title, snippetText, imageURL, imageCaption, href }) => {
+export default ({ title, date, snippetText, imageURL, imageCaption, href }) => {
   return (
     <div className={styles.container}>
       <div className={styles.albumContainer}>
@@ -18,6 +19,7 @@ export default ({ title, snippetText, imageURL, imageCaption, href }) => {
       </div>
       <section className={styles.textContainer}>
         <h4 className={styles.title}>{title}</h4>
+        <p>{moment(date).format("Do MMM YYYY")}</p>
         <p>{snippetText}</p>
         <Link href={href}>
           <a className={styles.link}>Open crate →</a>
